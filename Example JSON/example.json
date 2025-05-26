@@ -1,0 +1,113 @@
+{
+  "transitions": [
+    {
+      "startState": {
+        "type": "Animation",
+        "animationName": "Idle"
+      },
+      "endState": {
+        "type": "Animation",
+        "animationName": "Walk"
+      },
+      "conditions": [
+        {
+          "name": "IsWalking",
+          "type": "Bool",
+          "boolValue": true
+        }
+      ]
+    },
+    {
+      "startState": {
+        "type": "Animation",
+        "animationName": "Walk"
+      },
+      "endState": {
+        "type": "Animation",
+        "animationName": "Run"
+      },
+      "conditions": [
+        {
+          "name": "Speed",
+          "type": "Float",
+          "comparison": "Greater",
+          "numberValue": 5.0
+        }
+      ]
+    },
+    {
+      "startState": {
+        "type": "Animation",
+        "animationName": "Idle"
+      },
+      "endState": {
+        "type": "BlendTree",
+        "animationName": "JumpBlendTree",
+        "blendTree": {
+          "blendType": "OneD",
+          "parameterName": "JumpHeight",
+          "motions": [
+            {
+              "animationName": "SmallJump",
+              "threshold": 0.0
+            },
+            {
+              "animationName": "MediumJump",
+              "threshold": 1.0
+            }
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "name": "Jump",
+          "type": "Trigger"
+        }
+      ]
+    },
+    {
+      "startState": {
+        "type": "BlendTree",
+        "animationName": "Movement",
+        "blendTree": {
+          "blendType": "TwoD",
+          "parameterNames": ["Horizontal", "Vertical"],
+          "motions": [
+            {
+              "animationName": "MoveForward",
+              "threshold2D": [0.0, 1.0]
+            },
+            {
+              "animationName": "MoveBackward",
+              "threshold2D": [0.0, -1.0]
+            },
+            {
+              "animationName": "MoveRight",
+              "threshold2D": [1.0, 0.0]
+            },
+            {
+              "animationName": "MoveLeft",
+              "threshold2D": [-1.0, 0.0]
+            }
+          ]
+        }
+      },
+      "endState": {
+        "type": "Animation",
+        "animationName": "Attack"
+      },
+      "conditions": [
+        {
+          "name": "Attack",
+          "type": "Trigger"
+        },
+        {
+          "name": "Health",
+          "type": "Int",
+          "comparison": "Greater",
+          "numberValue": 20
+        }
+      ]
+    }
+  ]
+}
