@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System;
 using UnityEditor.Animations;
 
-namespace HarmonyAnimatorConverter
+namespace HarmonyAnimatorToolkit
 {
     public class TransitionJSONImporter : EditorWindow
     {

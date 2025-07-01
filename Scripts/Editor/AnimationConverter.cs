@@ -7,7 +7,7 @@ using System.IO;
 using System;
 
 
-namespace HarmonyAnimatorConverter
+namespace HarmonyAnimatorToolkit
 {
     public class AnimationConverter : EditorWindow
     {

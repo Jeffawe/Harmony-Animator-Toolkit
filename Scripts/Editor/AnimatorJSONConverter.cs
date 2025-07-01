@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace HarmonyAnimatorConverter
+namespace HarmonyAnimatorToolkit
 {
     public class AnimatorJsonConverterWindow : EditorWindow
     {

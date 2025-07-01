@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HarmonyAnimatorConverter
+namespace HarmonyAnimatorToolkit
 {
     public class AnimatorJsonValidator
     {

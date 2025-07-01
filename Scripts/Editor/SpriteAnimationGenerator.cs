@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace HarmonyAnimatorConverter
+namespace HarmonyAnimatorToolkit
 {
     public class SpriteAnimationGenerator : EditorWindow
     {

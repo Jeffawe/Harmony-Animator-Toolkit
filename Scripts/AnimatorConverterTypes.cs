@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HarmonyAnimatorConverter
+namespace HarmonyAnimatorToolkit
 {
     [CreateAssetMenu(fileName = "Transition Data", menuName = "HAS/Transition Data")]
     public class AnimatorConverterSO : ScriptableObject
